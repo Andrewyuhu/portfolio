@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$heading-text: #5244df;
+$primary-text: #0a192b;
+$secondary-text: #85868a;
+$primary-bg: #f9fafc;
+$font: "Inter", sans-serif;
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  color: $primary-text;
+  font-family: $font;
+  font-size: 16px;
+}
+
+#root {
+  @include flex-col();
+  background: $primary-bg;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+header {
+  @include flex-col();
+  align-items: center;
+  padding: 1rem;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  color: $heading-text;
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: $primary-text;
+  padding-left: 0.5rem;
+  border-left: 4px solid $heading-text;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  @include flex-center(row, 0.25rem);
+  width: 100vw;
+  padding: 0.75rem 0;
+  border-bottom: 1px #ebebeb solid;
+}
+
+section {
+  padding: 0 1rem;
+}
+
+.sub-heading {
+  color: $secondary-text;
+}
+
+.header-main-wrapper {
+  @include flex-center(column, 0.25rem);
+  border-bottom: 2px #ebebeb solid;
+  width: 100vw;
+  padding-bottom: 0.75rem;
+}
