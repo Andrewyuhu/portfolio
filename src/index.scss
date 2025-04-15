@@ -37,6 +37,7 @@ html {
 #root {
   background: $primary-bg;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 header {
