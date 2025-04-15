@@ -29,19 +29,27 @@ $font: "Inter", sans-serif;
 }
 
 #root {
-  @include flex-col();
   background: $primary-bg;
   min-height: 100vh;
-  gap: 1rem;
 }
 
 header {
+  background: white;
   @include flex-col();
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
-header ul {
+footer {
+  @include flex-center();
+  padding: 1rem;
+  background: white;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  color: $secondary-text;
+}
+
+ul {
   display: flex;
   list-style: none;
   gap: 1rem;
@@ -60,9 +68,24 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+h3 {
+  color: $heading-text;
+  font-size: 1rem;
+}
+
+.main-wrapper {
+  @include flex-col();
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
 nav {
   @include flex-center(row, 0.25rem);
-  width: 100vw;
+  top: 0;
+  z-index: 2;
+  position: sticky;
+  background: white;
+  width: 100%;
   padding: 0.75rem 0;
   border-bottom: 1px #ebebeb solid;
 }
@@ -80,4 +103,68 @@ section {
   border-bottom: 2px #ebebeb solid;
   width: 100vw;
   padding-bottom: 0.75rem;
+}
+
+.skill-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.circle {
+  aspect-ratio: 1;
+  height: 0.65rem;
+  border-radius: 50%;
+}
+
+.project-card {
+  border: 2px solid #ebebeb;
+  border-radius: 15px;
+  background: white;
+
+  span {
+    font-size: 0.7rem;
+    color: $secondary-text;
+  }
+}
+
+.project-card-details {
+  @include flex-col();
+  gap: 0.5rem;
+  padding: 0.75rem;
+  p {
+    color: $primary-text;
+    font-size: 0.9rem;
+  }
+}
+
+.project-card-skills {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+  border-top: 2px solid #ebebeb;
+  width: 100%;
+}
+
+.project-card-links {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    font-size: 0.75rem;
+    color: $heading-text;
+  }
+}
+
+.project-section {
+  @include flex-col();
+  gap: 1rem;
+}
+
+.project-card-headings {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
