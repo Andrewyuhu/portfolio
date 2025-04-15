@@ -96,14 +96,22 @@ function App() {
       </header>
       <nav>
         <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Experience</li>
-          <li>Contact</li>
+          <li>
+            <a href="#about-me">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#work-experience">Experience</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
       <div className="main-wrapper">
-        <section>
+        <section id="about-me">
           <h2>About me</h2>
           <p>
             Hi! I'm Andrew — a passionate full-stack developer currently
@@ -112,7 +120,7 @@ function App() {
             contribute to modern, impactful software solutions.
           </p>
         </section>
-        <section>
+        <section id="projects">
           <h2>Projects</h2>
           <div className="project-section">
             {projects.map((project) => (
@@ -127,7 +135,7 @@ function App() {
             ))}
           </div>
         </section>
-        <section>
+        <section id="work-experience">
           <h2>Work Experience</h2>
           <div className="project-section">
             {jobs.map((job) => (
