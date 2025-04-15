@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
   const [name, setName] = useState("");
@@ -14,17 +14,17 @@ function ContactForm() {
       return;
     }
 
-    // try {
-    //   emailjs.init({ publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY });
-    //   await emailjs.send(
-    //     import.meta.env.VITE_EMAILJS_SERVICE,
-    //     import.meta.env.VITE_EMAILJS_TEMPLATE,
-    //     { name, email, message }
-    //   );
-    //   console.log("success");
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      emailjs.init({ publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY });
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE,
+        import.meta.env.VITE_EMAILJS_TEMPLATE,
+        { name, email, message }
+      );
+      console.log("success");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
