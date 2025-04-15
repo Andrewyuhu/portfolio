@@ -1,5 +1,6 @@
 import ProjectCard from "./components/ProjectCard";
 import WorkCard from "./components/WorkCard";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   const projects = [
@@ -148,6 +149,10 @@ function App() {
               ></WorkCard>
             ))}
           </div>
+        </section>
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <ContactForm></ContactForm>
         </section>
       </div>
       <footer>Andrew Hu @2025</footer>
