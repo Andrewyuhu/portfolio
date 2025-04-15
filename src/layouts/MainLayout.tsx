@@ -1,14 +1,16 @@
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { ReactNode } from "react";
+import { Outlet } from "react-router";
 
-function MainLayout({ children }: { children: ReactNode }) {
+function MainLayout() {
   return (
     <>
       <Header></Header>
       <Navbar></Navbar>
-      <main className="main-wrapper">{children}</main>
+      <main className="main-wrapper">
+        <Outlet />
+      </main>
       <Footer></Footer>
     </>
   );
