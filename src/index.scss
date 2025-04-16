@@ -112,8 +112,18 @@ section {
   padding: 0 1rem;
 }
 
-.sub-heading {
+.header-sub-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   color: $secondary-text;
+}
+
+.header-icons {
+  aspect-ratio: 1;
+  width: 1.25rem;
+  margin-right: 0.5rem;
+  fill: $secondary-text;
 }
 
 .header-main-wrapper {
@@ -340,10 +350,16 @@ form {
   }
 
   section {
-    padding: 0 18rem;
+    padding: 0 10rem;
   }
 
   form {
     gap: 1rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  section {
+    padding: 0 15rem;
   }
 }
