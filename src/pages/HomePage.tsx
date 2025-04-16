@@ -8,7 +8,7 @@ function HomePage() {
       title: "Talky",
       subtitle: "Real Time Chat Application",
       content:
-        "A real time chat app created with websockets using Vue for the frontend and Golang for the backend",
+        "A real time chat app created with websockets using Vue for the frontend and Golang for the backend.",
       page: "/talky",
       repo: "",
       skills: [
@@ -24,7 +24,7 @@ function HomePage() {
       title: "Filey",
       subtitle: "File Storage Application",
       content:
-        "A Google Drive like application which lets users upload their files and organize them online",
+        "A Google Drive like application which lets users upload their files and organize them online.",
       page: "",
       repo: "",
       skills: [
@@ -41,8 +41,8 @@ function HomePage() {
       title: "Vike and Sell",
       subtitle: "Used Marketplace Application",
       content:
-        "A market place for University of Victoria students to sell used items and raise funds for charity",
-      page: "",
+        "A market place for University of Victoria students to sell used items and raise funds for charity.",
+      page: "/vikeandsell",
       repo: "",
       skills: [
         { name: "TypeScript", color: "#3178c6" },
@@ -73,15 +73,15 @@ function HomePage() {
       titleDescription: "University of Victoria ( 2022 - Present )",
       content:
         "An part-time position at the University of Victoria where I help support a community of other 20,000 students and faculty with their technical issues and promote cybersecurity awareness",
-      repo: "Filler",
+      repo: "",
       skills: [],
     },
     {
       title: "Climate Data Technician",
       titleDescription: "Government of Alberta ( Sept 2023 - April 2024 )",
       content:
-        "An internship with the Government of Alberta where I assisted with creating an aggregrated ranked climate data used for water modeling of Alberta water basins",
-      repo: "Filler",
+        "An internship with the Government of Alberta where I assisted with creating an aggregrated ranked climate data used for water modeling of Alberta water basins.",
+      repo: "",
       skills: [
         { name: "R", color: "#2468b8" },
         { name: "Python", color: "#f8d856" },
@@ -93,10 +93,12 @@ function HomePage() {
       <section id="about-me">
         <h2>About me</h2>
         <p>
-          Hi! I'm Andrew — a passionate full-stack developer currently
-          completing my degree in Software Engineering. I enjoy building
-          intuitive user interfaces and scalable backend systems. I'm eager to
-          contribute to modern, impactful software solutions.
+          Hey! I'm Andrew, a full-stack developer wrapping up my degree in
+          Software Engineering. I love building clean, user-friendly interfaces
+          and robust backend systems. I'm particularly excited about exploring
+          new technologies, diving deeper into design principles, especially
+          what makes a great user experience and learning more about creating
+          scalable backend systems.
         </p>
       </section>
       <section id="projects">

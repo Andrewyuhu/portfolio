@@ -5,8 +5,11 @@ function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+    setSuccessMessage("");
+    setErrorMessage("");
     e.preventDefault();
     const form = e.currentTarget;
     if (!form.checkValidity()) {
@@ -21,9 +24,9 @@ function ContactForm() {
         import.meta.env.VITE_EMAILJS_TEMPLATE,
         { name, email, message }
       );
-      console.log("success");
-    } catch (error) {
-      console.log(error);
+      setSuccessMessage("Message sent!");
+    } catch {
+      setErrorMessage("Something went wrong. Please try again!");
     }
   };
 
@@ -63,6 +66,10 @@ function ContactForm() {
           placeholder="Write your message (max 500 characters)"
         ></textarea>
       </div>
+      {successMessage && (
+        <span className="success-message">{successMessage}</span>
+      )}
+      {errorMessage && <span className="error-message">{errorMessage}</span>}
       <button className="form-btn" type="submit">
         Submit
       </button>
