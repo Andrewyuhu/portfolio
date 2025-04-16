@@ -11,17 +11,17 @@ function Navbar() {
         </li>
         <li>
           <HashLink smooth to="/#projects">
-            About
+            Projects
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#work-experiencee">
-            About
+          <HashLink smooth to="/#work-experience">
+            Work Experience
           </HashLink>
         </li>
         <li>
           <HashLink smooth to="/#contact">
-            About
+            Contact
           </HashLink>
         </li>
       </ul>
