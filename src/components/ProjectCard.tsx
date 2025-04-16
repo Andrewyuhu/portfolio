@@ -1,9 +1,11 @@
+import { Link } from "react-router";
 import SkillTag, { type SkillTagProps } from "./SkillTag";
 
 interface ProjectCardProps {
   title: string;
   subtitle: string;
   content: string;
+  page: string;
   repo: string;
   skills: SkillTagProps[];
 }
@@ -11,6 +13,7 @@ interface ProjectCardProps {
 function ProjectCard({
   title,
   content,
+  page,
   repo,
   skills,
   subtitle,
@@ -24,8 +27,8 @@ function ProjectCard({
         </div>
         <p>{content}</p>
         <div className="project-card-links">
-          <a href="#">More</a>
-          <a href={repo}>Repo</a>
+          {page && <Link to={page}>More</Link>}
+          {repo && <a href={repo}>Repo</a>}
         </div>
       </div>
       <div className="project-card-skills">

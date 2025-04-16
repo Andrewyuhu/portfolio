@@ -9,7 +9,8 @@ function HomePage() {
       subtitle: "Real Time Chat Application",
       content:
         "A real time chat app created with websockets using Vue for the frontend and Golang for the backend",
-      repo: "Filler",
+      page: "/talky",
+      repo: "",
       skills: [
         { name: "Go", color: "#78d4fd" },
         { name: "Vue", color: "#3dbb81" },
@@ -24,7 +25,8 @@ function HomePage() {
       subtitle: "File Storage Application",
       content:
         "A Google Drive like application which lets users upload their files and organize them online",
-      repo: "Filler",
+      page: "",
+      repo: "",
       skills: [
         { name: "Javascript", color: "#e8d44d" },
         { name: "React", color: "#0bd0f8" },
@@ -40,7 +42,8 @@ function HomePage() {
       subtitle: "Used Marketplace Application",
       content:
         "A market place for University of Victoria students to sell used items and raise funds for charity",
-      repo: "Filler",
+      page: "",
+      repo: "",
       skills: [
         { name: "TypeScript", color: "#3178c6" },
         { name: "React", color: "#0bd0f8" },
@@ -54,7 +57,8 @@ function HomePage() {
       title: "Personal Portfolio",
       subtitle: "",
       content: "This website you're currently on!",
-      repo: "Filler",
+      page: "",
+      repo: "",
       skills: [
         { name: "TypeScript", color: "#3178c6" },
         { name: "React", color: "#0bd0f8" },
@@ -103,6 +107,7 @@ function HomePage() {
               title={project.title}
               subtitle={project.subtitle}
               content={project.content}
+              page={project.page}
               skills={project.skills}
               repo={project.repo}
               key={project.title}

@@ -43,7 +43,7 @@ header {
   background: white;
   @include flex-col();
   align-items: center;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 0 0 0;
 }
 
 footer {
