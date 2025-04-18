@@ -1,6 +1,7 @@
 import ProjectCard from "../components/ProjectCard";
 import WorkCard from "../components/WorkCard";
 import ContactForm from "../components/ContactForm";
+import ProjectCard2 from "../components/ProjectCard2";
 
 function HomePage() {
   const projects = [
@@ -104,6 +105,7 @@ function HomePage() {
       <section id="projects">
         <h2>Projects</h2>
         <div className="project-section">
+          <ProjectCard2></ProjectCard2>
           {projects.map((project) => (
             <ProjectCard
               title={project.title}
