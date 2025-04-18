@@ -4,12 +4,13 @@ $primary: #5244df;
 $primary-text: #0a192b;
 $secondary-text: #85868a;
 $shift-distance: 1rem;
+$animation-time: 0.25s;
 
 .project-card-container {
-  --gradient-clr-one: red;
-  --gradient-clr-two: blue;
+  --gradient-clr-one: #5244df;
+  --gradient-clr-two: #24a9e1;
   display: flex;
-  background-color: white;
+  background: white;
   flex-direction: column;
   height: 300px;
   border-radius: 5px;
@@ -19,7 +20,7 @@ $shift-distance: 1rem;
 
 .project-card-thumbnail {
   position: relative;
-  flex: 2;
+  height: 190px;
   overflow: hidden;
   border-radius: $border-radius;
   transform-origin: top;
@@ -37,8 +38,9 @@ $shift-distance: 1rem;
 .project-card-gradient {
   position: absolute;
   width: 100%;
-  height: 100%;
-
+  height: 99.8%;
+  overflow: hidden;
+  display: none;
   .gradient-svg {
     position: absolute;
     left: -50%;
@@ -59,19 +61,19 @@ $shift-distance: 1rem;
   position: absolute;
   width: 100%;
   aspect-ratio: 16 / 9;
-  top: 25%;
+  top: 30%;
   left: 15%;
   border-radius: $border-radius;
   will-change: transform;
 }
 
 .project-card-text {
+  height: 110px;
   display: flex;
   background-color: white;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem 1rem 0 1rem;
-  flex: 1;
 }
 
 .project-card-header {
@@ -84,9 +86,39 @@ $shift-distance: 1rem;
   color: $secondary-text;
 }
 
+// ANIMATIONS
 .project-card-cta {
-  visibility: hidden;
+  opacity: 0;
   color: $primary;
+  transition: opacity ease-in-out $animation-time;
+}
+
+.project-card-thumbnail,
+.project-card-image,
+.project-card-text {
+  transition: transform ease-in-out $animation-time;
+}
+
+.project-card-container:hover {
+  .project-card-text {
+    transform: translateY(-1 * $shift-distance);
+  }
+
+  .project-card-image {
+    transform: scaleY(1.086) translateY(-1 * $shift-distance);
+  }
+
+  .project-card-cta {
+    opacity: 1;
+  }
+
+  .project-card-thumbnail {
+    transform: scaleY(0.92);
+
+    .project-card-gradient {
+      display: block;
+    }
+  }
 }
 
 // Media Query for mobile devices with no mouse for hover events
@@ -103,8 +135,12 @@ $shift-distance: 1rem;
     transform: translateY(-1 * $shift-distance);
   }
 
+  .project-card-gradient {
+    display: block;
+  }
+
   .project-card-cta {
-    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -114,7 +150,11 @@ $shift-distance: 1rem;
   }
 
   .project-card-thumbnail {
-    flex: 3;
+    height: 300px;
+  }
+
+  .project-card-text {
+    height: 100px;
   }
 
   .project-card-text {
@@ -124,15 +164,19 @@ $shift-distance: 1rem;
 
 @media (min-width: 768px) {
   .project-card-container {
-    height: 300px;
+    height: 400px;
   }
 
   .project-card-thumbnail {
-    flex: 2;
+    height: 300;
   }
 
   .project-card-text {
-    flex: 1;
+    height: 100;
+  }
+
+  .project-card-container {
+    top: 40%;
   }
 
   .project-card-header {
@@ -141,6 +185,60 @@ $shift-distance: 1rem;
 
   .project-card-description .project-card-cta {
     font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .project-card-container {
+    height: 300px;
+  }
+
+  .project-card-thumbnail {
+    height: 170px;
+  }
+
+  .project-card-gradient {
+    height: 99.5%;
+  }
+
+  .project-card-text {
+    height: 130;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-card-container {
+    height: 400px;
+  }
+
+  .project-card-thumbnail {
+    height: 270px;
+  }
+
+  .project-card-gradient {
+    height: 99.5%;
+  }
+
+  .project-card-text {
+    height: 130px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .project-card-container {
+    height: 400px;
+  }
+
+  .project-card-thumbnail {
+    height: 300px;
+  }
+
+  .project-card-gradient {
+    height: 99.5%;
+  }
+
+  .project-card-text {
+    height: 130px;
   }
 }
 
